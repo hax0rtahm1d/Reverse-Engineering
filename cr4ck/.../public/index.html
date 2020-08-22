@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Facebook Token</title>
+</head>
+
+<body>
+  <div class="jumbotron text-center">
+    <style typecss="[{http://sahabatblogger77.blogspot.com}]">
+  #highlight{font:bold 40px Impact,Arial,Sans-Serif;}</style>
+<script language="javascript" type="text/javascript">
+     var teks="Hai Bro"
+     var speed=20
+
+if (document.all||document.getElementById) {
+     document.write('<span id="highlight">' + teks + '</span>')
+     var storetext=document.getElementById? document.getElementById("highlight") :
+document.all.highlight
+} else document.write(text)
+var hex=new Array("00","14","28","3C","50","64","78","8C","A0","B4","C8","DC","F0")
+
+var r=1
+var g=1
+var b=1
+var seq=1
+
+function changetext() {
+     rainbow="#"+hex[r]+hex[g]+hex[b]
+     storetext.style.color=rainbow
+}
+
+function change() {
+if (seq==6) {
+b--
+if (b==0)
+seq=1
+}
+if (seq==5) {
+r++
+if (r==12)
+seq=6
+}
+if (seq==4) {
+g--
+if (g==0)
+seq=5
+}
+if (seq==3) {
+b++
+if (b==12)
+seq=4
+}
+if (seq==2) {
+r--
+if (r==0)
+seq=3
+}
+if (seq==1) {
+g++
+if (g==12)
+seq=2
+}
+changetext()
+}
+
+function starteffect() {
+     if (document.all||document.getElementById)
+     flash=setInterval("change()",speed)
+}
+
+starteffect()
+</script>
+    </a><h3> Ikuti Saya Di Facebook </h3>
+     <button onclick="window.location=
+    'https://m.facebook.com/Rizky.Rasata'"
+    style="background-color: #357ae8;
+    color: #fff;
+    height: 35px; width: 150px;">
+    <b>
+    Follow
+    </b>
+    </button>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label class="control-label">Login Facebook</label>
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" aria-label="Facebook ID" id="email">
+              <div class="input-group-append">
+                <span class="input-group-text">ID/Email</span>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+              <input type="password" class="form-control" aria-label="Facebook Password" id="password">
+              <div class="input-group-append">
+                <span class="input-group-text">Password</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-success" id='getToken'>Get Token</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card border-success mb-3">
+          <div class="card-header">Hasil : </div>
+          <div class="card-body">
+           <p class="card-text" id="result">Hasil Token Akan Muncul Di Sini</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="jquery.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
