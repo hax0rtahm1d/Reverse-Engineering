@@ -1,0 +1,44 @@
+# uncompyle6 version 3.7.3
+# Python bytecode 2.7
+# Decompiled from: Python 2.7.16 (default, Oct 10 2019, 22:02:15) 
+# [GCC 8.3.0]
+# Embedded file name: <script>
+import os, sys, time
+P = '\x1b[0m'
+H = '\x1b[91m'
+G = '\x1b[92m'
+K = '\x1b[93m'
+
+def Loads():
+    for i in range(101):
+        time.sleep(0.3)
+        sys.stdout.write(G + '\r[+] ' + P + 'Loads Akun : %d%%' % i)
+        sys.stdout.flush()
+
+
+def Report():
+    for d in range(101):
+        time.sleep(0.2)
+        sys.stdout.write(G + '\r[*] ' + P + 'Mulai Processing ... [%d%%] ' % d)
+        sys.stdout.flush()
+
+
+print '-' * 49 + H
+os.system('figlet " R E P O R T"')
+print P + '=' * 49
+B = raw_input(G + '[+]' + P + ' ID Target  : ')
+print '=' * 49
+if not B.startswith('1000'):
+    print '[!] Format ID Salah'
+    sys.exit()
+    print '=' * 49
+Loads()
+time.sleep(3)
+print ''
+print '=' * 49
+a = 1
+while True:
+    print ('{}[-] {}Prosess Report Ke [{}] => {}{}').format(G, P, a, H, B)
+    print ('{} | {}[+]{} Success').format(Report(), K, G)
+    print '=' * 49
+    a += 1
