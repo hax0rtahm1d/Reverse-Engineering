@@ -2,7 +2,7 @@
 
 ## Introduction
 
-#### Here You can find the Tools I have Reverse Engineered ! There is no Right to Encrypt Source Code !
+#### Here You can find the Tools I have Reverse Engineered !
 
 
 
