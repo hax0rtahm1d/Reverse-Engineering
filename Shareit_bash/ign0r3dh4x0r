@@ -1,0 +1,117 @@
+#!/bin/bash
+
+# Just Checking The Codes .. Happy Coding 
+
+# XOWMIK IS STARTING FUCKING YOU  - Really :)
+sleep 0.5
+clear
+sleep 0.5
+command -v curl > /dev/null 2>&1 || { printf "\n\t\e[0m\e[0m\e[36m[\e[1;37m+\e[36m] \e[34m   Installing REQUIREMENTS... \e[0m\n\n"; apt install curl -y; clear; }
+# FIRST STEP IS SUCKING, YOU KNOW IT BETTER :D - Really :V
+logo(){
+clear
+echo -e "\e[1;33m         __                    \e[1;36m  ______  "
+echo -e "\e[1;33m   _____/ /_  ____  _________ \e[1;36m  /  _/ /_ "
+echo -e "\e[1;33m  / ___/ __ \/ __ \/ ___/ _ | \e[1;36m / // __/ "
+echo -e "\e[1;33m (__  ) / / / /_/ / /  /  __/\e[1;36m / // /_   "
+echo -e "\e[1;33m/____/_/ /_/\__,_/_/\e[1;30m1.2\e[1;33m\___/ \e[1;36m/__/\__/   "
+printf "\e[1;32m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+printf "\e[1;32m║ \e[1;37m  SHARE FILES FROM TERMINAL   \e[1;32m║  \n"
+printf "\e[1;32m║ \e[1;37mAUTHOR : SHAYER MAHMUD SOWMIK \e[1;32m║  \n"
+printf "\e[1;32m║ \e[1;97mGIHUB  : GITHUB/IGN0R3DH4X0R  \e[1;32m║ \n"
+printf "\e[1;32m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\e[0m"
+echo ""
+}
+# SECOND STEP IS LICKING; BUT I WON'T LICK YOUR DIRTY PUSSY :) - - Really :)
+index(){
+sleep 0.2
+printf " \e[1;96m>> \e[1;31mIndex Menu:"
+printf "  \n\n\e[0m \e[1;32m[\e[1;37m01\e[1;32m] \e[1;93mSERVER 1 \e[1;31m(ANONYMOUSEFILES.IO)"
+printf "  \n\e[0m \e[1;32m[\e[1;37m02\e[1;32m] \e[1;93mSERVER 2 \e[1;31m(ANONFILES.COM)"
+printf "  \n\e[0m \e[1;32m[\e[1;37m03\e[1;32m] \e[1;93mMORE EPIC TOOLS"
+read -p $'  \n\n\e[1;31m[\e[0m\e[1;37m+\e[0m\e[1;31m]\e[0m\e[1;92m SELECT: \e[0m\e[1;96m\en' sel
+if [[ $sel == 1 || $sel == 01 ]]; then
+  file_get_1
+elif [[ $sel == 2 || $sel == 02 ]]; then
+  file_get_2
+elif [[ $sel == 3 || $sel == 03  ]]; then
+  xdg-open http://github.com/Ign0r3dH4x0r
+else
+  printf "\n  \e[31m[\e[1;33m~\e[31m] Invalid Options! Try again."
+  sleep 2
+  logo
+  index
+fi
+}
+
+# STARTING FUCKING YOU LIKE A DOGGY :P - OH SHIT :)
+server_1(){
+sleep 1
+printf "  \n\e[1;31m[\e[0m\e[1;37m!\e[0m\e[1;31m]\e[0m\e[1;92m UPLOADING FILE.\n\n"
+response=$(curl -F file=@"${dir}" https://api.anonymousfiles.io/)
+id=$(echo $response | grep -Po '(?<="id":)[^},]*' | tr -d '[]"' | sed 's/\(<[^>]*>\|<\/>\|{1|}\)//g')
+name=$(echo $response | grep -Po '(?<="name":)[^},]*' | tr -d '[]"' | sed 's/\(<[^>]*>\|<\/>\|{1|}\)//g')
+size=$(echo $response | grep -Po '(?<="size":)[^},]*' | tr -d '[]"' | sed 's/\(<[^>]*>\|<\/>\|{1|}\)//g')
+url=$(echo $response | grep -Po '(?<="url":)[^},]*' | tr -d '[]"' | sed 's/\(<[^>]*>\|<\/>\|{1|}\)//g')
+msg=$(echo $message | grep -Po '(?<="url":)[^},]*' | tr -d '[]"' | sed 's/\(<[^>]*>\|<\/>\|{1|}\)//g')
+printf "\n \e[1;97m>>> \e[1;34mDETAILS => \n"
+printf "\n \e[0m \e[1;91m>>\e[1;93m URL    :  $url"
+printf "\n \e[0m \e[1;91m>>\e[1;93m ID     :  $id"
+printf "\n \e[0m \e[1;91m>>\e[1;93m NAME   :  $name"
+printf "\n \e[0m \e[1;91m>>\e[1;93m SIZE   :  $size BYTES"
+printf "\n\e[1;93m $msg"
+sleep 1
+printf "  \n\e[1;31m[\e[0m\e[1;37m!\e[0m\e[1;31m]\e[0m\e[1;92m UPLOADED BY IGN0R3DH4X0R. EXITING.."
+exit 1
+}
+# THIS STEP IS TO LET YOU FUCK YOURSELF :V -  I am not a gay man :)
+server_2(){
+sleep 1
+printf "  \n\e[1;31m[\e[0m\e[1;37m!\e[0m\e[1;31m]\e[0m\e[1;92m UPLOADING FILE..\n\n"
+response=$(curl -F file=@"${dir}" https://api.anonfiles.com/upload)
+id=$(echo $response | grep -Po '(?<="id":)[^},]*' | tr -d '[]"' | sed 's/\(<[^>]*>\|<\/>\|{1|}\)//g')
+name=$(echo $response | grep -Po '(?<="name":)[^},]*' | tr -d '[]"' | sed 's/\(<[^>]*>\|<\/>\|{1|}\)//g')
+size=$(echo $response | grep -Po '(?<="readable":)[^},]*' | tr -d '[]"' | sed 's/\(<[^>]*>\|<\/>\|{1|}\)//g')
+url=$(echo $response | grep -Po '(?<="full":)[^},]*' | tr -d '[]"' | sed 's/\(<[^>]*>\|<\/>\|{1|}\)//g')
+msg=$(echo $message | grep -Po '(?<="url":)[^},]*' | tr -d '[]"' | sed 's/\(<[^>]*>\|<\/>\|{1|}\)//g')
+printf "\n \e[1;97m>>> \e[1;34mDETAILS => \n"
+printf "\n \e[0m \e[1;91m>>\e[1;93m URL    :  $url"
+printf "\n \e[0m \e[1;91m>>\e[1;93m ID     :  $id"
+printf "\n \e[0m \e[1;91m>>\e[1;93m NAME   :  $name"
+printf "\n \e[0m \e[1;91m>>\e[1;93m SIZE   :  $size"
+printf "\n\e[1;93m $msg"
+sleep 1
+printf "  \n\e[1;31m[\e[0m\e[1;37m!\e[0m\e[1;31m]\e[0m\e[1;92m UPLOADED BY IGN0R3DH4X0R. EXITING.."
+exit 1
+}
+# YOU FAILED TO TAKE MY FUCKING POWER :D - RIP ENGLISH
+file_get_1(){
+sleep 0.3
+logo
+sleep 0.5
+read -p $'  \n\e[1;31m[\e[0m\e[1;37m+\e[0m\e[1;31m]\e[0m\e[1;92m ENTER FILE DIRECTORY: \e[0m\e[1;96m\en' dir
+if [[ -e $dir ]]; then
+logo
+server_1
+else
+printf "  \n\e[1;31m[\e[0m\e[1;37m!\e[0m\e[1;31m]\e[0m\e[1;92m FILE NOT FOUND! PLEASE TRY AGAIN."
+exit 1
+fi
+}
+# YOU FALL ASLEEP :-/ - YAP :V & STARTED DECODING :)
+file_get_2(){
+sleep 0.3
+logo
+sleep 0.5
+read -p $'  \n\e[1;31m[\e[0m\e[1;37m+\e[0m\e[1;31m]\e[0m\e[1;92m ENTER FILE DIRECTORY: \e[0m\e[1;96m\en' dir
+if [[ -e $dir ]]; then
+logo
+server_2
+else
+printf "  \n\e[1;31m[\e[0m\e[1;37m!\e[0m\e[1;31m]\e[0m\e[1;92m FILE NOT FOUND! PLEASE TRY AGAIN."
+exit 1
+fi
+}
+# SO I'M EXITING.. - ME Too ;)
+logo
+index
